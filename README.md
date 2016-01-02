@@ -1,2 +1,29 @@
 # express-elements
-Polymer web components for declaratively constructing an express web applications. 
+
+> My super-duper app
+
+
+## Dev
+
+```
+$ npm install
+```
+
+### Run
+
+```
+$ npm start
+```
+
+### Build
+
+```
+$ npm run build
+```
+
+Builds the app for OS X, Linux, and Windows, using [electron-packager](https://github.com/maxogden/electron-packager).
+
+
+## License
+
+MIT © [Brett Lamy](https://github.com/blamy)
