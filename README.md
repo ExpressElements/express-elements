@@ -1,18 +1,12 @@
-# express-elements
+# express-server-demo
 
-> My super-duper app
+> Declaratively create a Express server inside of your electron applications using polymer web components.
 
 
-## Dev
-
-```
-$ npm install
-```
-
-### Run
+## Run
 
 ```
-$ npm start
+$ npm install && bower install && npm start
 ```
 
 ### Build
@@ -21,9 +15,37 @@ $ npm start
 $ npm run build
 ```
 
-Builds the app for OS X, Linux, and Windows, using [electron-packager](https://github.com/maxogden/electron-packager).
+# Usage
 
+```html
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="bower_components/express-server/express-server.html">
+	</head>
+	<body>
+		<template id="app" is="dom-bind">
+			<express-server port="{{port}}">
+				<express-route method="get" path="/" middleware="[[_home()]]"></express-route>
+			</express-server>
+			<h1>Express Server running on port [[port]]</h1>
+		</template>
+		<script>
+		(function(){
+			'use strict';
+			const app = document.getElementById("app");
 
-## License
+			app._home = () => {
+				return function (req, res) {
+					res.send("hello world2");
+				};
+			}
+		})();
+		</script>
+	</body>
+</html>
 
-MIT © [Brett Lamy](https://github.com/blamy)
+```
