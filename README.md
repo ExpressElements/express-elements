@@ -20,7 +20,7 @@ $ npm run build
 ```html
 <!doctype html>
 <html>
-	<head>
+  <head>
 		<meta charset="utf-8">
 		<title>Electron boilerplate</title>
 		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
