@@ -1,0 +1,26 @@
+{
+  "name": "express-elements",
+  "description": "My super-duper app",
+  "main": "index.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "homepage": "https://github.com/ExpressElements/express-elements",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "express-elements": "ExpressElements/express-elements",
+    "express-server": "ExpressElements/express-server"
+  }
+}
